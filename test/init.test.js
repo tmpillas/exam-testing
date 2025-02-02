@@ -40,10 +40,22 @@ test("GET authors/{authorId} endpoint returns valid JSON content-type header", a
 });
 
 
-test("GET /book/{id} - Shdfdsfould return a book for a valid ID", async (t) => {
-    const {body, statusCode} = await t.context.got("authors/0");
+
+
+//EDW EINAI SWSTH EKTELESH
+test("GET /books/{bookId} - Shdfdsfould return a book for a valid ID", async (t) => {
+    const bookId = 1;
+    const {body, statusCode} = await t.context.got(`books/${bookId}`);
     t.is(statusCode, 200, "Response status should be 200");
+    t.truthy(body, "Response body should not be empty");
+    t.is(typeof body, "object", "Response body should be an object");
+    // Example: Checking if the returned book has an expected property
+    t.truthy(body.title, "Book should have a title");
 });
+
+
+
+
 
 test("DELETE /book/{id} - Should return a book for a valid ID", async (t) => {
     const {body, statusCode} = await t.context.got.delete("books/0");
@@ -57,17 +69,20 @@ test("autorIdPut", async (t) => {
   
 
   const Bookdata = {
-    "title": "string",
-    "author_id": 0,
-    "category_id": 0,
-    "id": 0,
-    "published_year": 0
-  };
+    title: "title",
+    author_id: 1,
+    category_id: 2,
+    published_year: 2023
+}
   
-  test("BookPost", async (t) => {
-    const{headers, statusCode} = await t.context.got.post(`books`, {json: Bookdata, responseType: 'json'});
+  test("POST /books", async (t) => {
+    const{headers, statusCode, body} = await t.context.got.post(`books`, {json: Bookdata, responseType: 'json'});
     t.is(statusCode, 200, "Response status should be 200");
     t.is(headers["content-type"], "application/json"); // The content-type should be JSON
+
+    // Optional: Verify response structure
+    t.truthy(body.category_id, "Response should include an ID");
+    t.is(body.title, Bookdata.title, "Title should match");
   });
 
   test("GET categories/{categoryId} endpoint returns valid JSON content-type header", async (t) => {
