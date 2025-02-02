@@ -1,6 +1,5 @@
 'use strict';
 
-
 /**
  * Delete an author
  *
@@ -9,10 +8,10 @@
  **/
 exports.authorsAuthorIdDELETE = function(authorId) {
   return new Promise(function(resolve, _) {
+    // Simulate deletion operation
     resolve();
   });
 }
-
 
 /**
  * Get details of a specific author
@@ -22,11 +21,13 @@ exports.authorsAuthorIdDELETE = function(authorId) {
  **/
 exports.authorsAuthorIdGET = function(authorId) {
   return new Promise(function(resolve, _) {
+    // Example data to simulate a database response
     var examples = {};
     examples['application/json'] = {
-  "name" : "name",
-  "id" : 0
-};
+      "name" : "name",
+      "id" : 0
+    };
+    // Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -34,7 +35,6 @@ exports.authorsAuthorIdGET = function(authorId) {
     }
   });
 }
-
 
 /**
  * Update an author
@@ -43,13 +43,15 @@ exports.authorsAuthorIdGET = function(authorId) {
  * authorId Long 
  * returns Author
  **/
-exports.authorsAuthorIdPUT = function(body,authorId) {
+exports.authorsAuthorIdPUT = function(body, authorId) {
   return new Promise(function(resolve, _) {
+    // Example data to simulate a database response
     var examples = {};
     examples['application/json'] = {
-  "name" : "name",
-  "id" : 0
-};
+      "name" : "name",
+      "id" : 0
+    };
+    // Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -57,7 +59,6 @@ exports.authorsAuthorIdPUT = function(body,authorId) {
     }
   });
 }
-
 
 /**
  * Get all authors
@@ -66,14 +67,19 @@ exports.authorsAuthorIdPUT = function(body,authorId) {
  **/
 exports.authorsGET = function() {
   return new Promise(function(resolve, _) {
+    // Example data to simulate a database response
     var examples = {};
-    examples['application/json'] = [ {
-  "name" : "name",
-  "id" : 0
-}, {
-  "name" : "name",
-  "id" : 0
-} ];
+    examples['application/json'] = [ 
+      {
+        "name" : "name",
+        "id" : 0
+      }, 
+      {
+        "name" : "name",
+        "id" : 0
+      } 
+    ];
+    // Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -81,7 +87,6 @@ exports.authorsGET = function() {
     }
   });
 }
-
 
 /**
  * Add a new author
@@ -91,11 +96,13 @@ exports.authorsGET = function() {
  **/
 exports.authorsPOST = function(body) {
   return new Promise(function(resolve, _) {
+    // Example data to simulate a database response
     var examples = {};
     examples['application/json'] = {
-  "name" : "name",
-  "id" : 0
-};
+      "name" : "name",
+      "id" : 0
+    };
+    // Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -103,7 +110,6 @@ exports.authorsPOST = function(body) {
     }
   });
 }
-
 
 /**
  * Delete a book
@@ -113,10 +119,10 @@ exports.authorsPOST = function(body) {
  **/
 exports.booksBookIdDELETE = function(bookId) {
   return new Promise(function(resolve, _) {
+    // Simulate deletion operation
     resolve();
   });
 }
-
 
 /**
  * Get details of a specific book
@@ -126,14 +132,16 @@ exports.booksBookIdDELETE = function(bookId) {
  **/
 exports.booksBookIdGET = function(bookId) {
   return new Promise(function(resolve, _) {
+    // Example data to simulate a database response
     var examples = {};
     examples['application/json'] = {
-  "category_id" : 1,
-  "published_year" : 5,
-  "id" : 0,
-  "title" : "title",
-  "author_id" : 6
-};
+      "category_id" : 1,
+      "published_year" : 5,
+      "id" : 0,
+      "title" : "title",
+      "author_id" : 6
+    };
+    // Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -141,7 +149,6 @@ exports.booksBookIdGET = function(bookId) {
     }
   });
 }
-
 
 /**
  * Update a book
@@ -150,16 +157,18 @@ exports.booksBookIdGET = function(bookId) {
  * bookId Long 
  * returns Book
  **/
-exports.booksBookIdPUT = function(body,bookId) {
+exports.booksBookIdPUT = function(body, bookId) {
   return new Promise(function(resolve, _) {
+    // Example data to simulate a database response
     var examples = {};
     examples['application/json'] = {
-  "category_id" : 1,
-  "published_year" : 5,
-  "id" : 0,
-  "title" : "title",
-  "author_id" : 6
-};
+      "category_id" : 1,
+      "published_year" : 5,
+      "id" : 0,
+      "title" : "title",
+      "author_id" : 6
+    };
+    // Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -167,7 +176,6 @@ exports.booksBookIdPUT = function(body,bookId) {
     }
   });
 }
-
 
 /**
  * Get all books
@@ -176,20 +184,25 @@ exports.booksBookIdPUT = function(body,bookId) {
  **/
 exports.booksGET = function() {
   return new Promise(function(resolve, _) {
+    // Example data to simulate a database response
     var examples = {};
-    examples['application/json'] = [ {
-  "category_id" : 1,
-  "published_year" : 5,
-  "id" : 0,
-  "title" : "title",
-  "author_id" : 6
-}, {
-  "category_id" : 1,
-  "published_year" : 5,
-  "id" : 0,
-  "title" : "title",
-  "author_id" : 6
-} ];
+    examples['application/json'] = [ 
+      {
+        "category_id" : 1,
+        "published_year" : 5,
+        "id" : 0,
+        "title" : "title",
+        "author_id" : 6
+      }, 
+      {
+        "category_id" : 1,
+        "published_year" : 5,
+        "id" : 0,
+        "title" : "title",
+        "author_id" : 6
+      } 
+    ];
+    // Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -197,7 +210,6 @@ exports.booksGET = function() {
     }
   });
 }
-
 
 /**
  * Add a new book
@@ -207,14 +219,16 @@ exports.booksGET = function() {
  **/
 exports.booksPOST = function(body) {
   return new Promise(function(resolve, _) {
+    // Example data to simulate a database response
     var examples = {};
     examples['application/json'] = {
-  "category_id" : 1,
-  "published_year" : 5,
-  "id" : 0,
-  "title" : "title",
-  "author_id" : 6
-};
+      "category_id" : 1,
+      "published_year" : 5,
+      "id" : 0,
+      "title" : "title",
+      "author_id" : 6
+    };
+    // Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -222,7 +236,6 @@ exports.booksPOST = function(body) {
     }
   });
 }
-
 
 /**
  * Delete a category
@@ -232,10 +245,10 @@ exports.booksPOST = function(body) {
  **/
 exports.categoriesCategoryIdDELETE = function(categoryId) {
   return new Promise(function(resolve, _) {
+    // Simulate deletion operation
     resolve();
   });
 }
-
 
 /**
  * Get details of a specific category
@@ -245,11 +258,13 @@ exports.categoriesCategoryIdDELETE = function(categoryId) {
  **/
 exports.categoriesCategoryIdGET = function(categoryId) {
   return new Promise(function(resolve, _) {
+    // Example data to simulate a database response
     var examples = {};
     examples['application/json'] = {
-  "name" : "name",
-  "id" : 0
-};
+      "name" : "name",
+      "id" : 0
+    };
+    // Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -257,7 +272,6 @@ exports.categoriesCategoryIdGET = function(categoryId) {
     }
   });
 }
-
 
 /**
  * Update a category
@@ -266,13 +280,15 @@ exports.categoriesCategoryIdGET = function(categoryId) {
  * categoryId Long 
  * returns Category
  **/
-exports.categoriesCategoryIdPUT = function(body,categoryId) {
+exports.categoriesCategoryIdPUT = function(body, categoryId) {
   return new Promise(function(resolve, _) {
+    // Example data to simulate a database response
     var examples = {};
     examples['application/json'] = {
-  "name" : "name",
-  "id" : 0
-};
+      "name" : "name",
+      "id" : 0
+    };
+    // Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -280,7 +296,6 @@ exports.categoriesCategoryIdPUT = function(body,categoryId) {
     }
   });
 }
-
 
 /**
  * Get all categories
@@ -289,14 +304,19 @@ exports.categoriesCategoryIdPUT = function(body,categoryId) {
  **/
 exports.categoriesGET = function() {
   return new Promise(function(resolve, _) {
+    // Example data to simulate a database response
     var examples = {};
-    examples['application/json'] = [ {
-  "name" : "name",
-  "id" : 0
-}, {
-  "name" : "name",
-  "id" : 0
-} ];
+    examples['application/json'] = [ 
+      {
+        "name" : "name",
+        "id" : 0
+      }, 
+      {
+        "name" : "name",
+        "id" : 0
+      } 
+    ];
+    // Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -304,7 +324,6 @@ exports.categoriesGET = function() {
     }
   });
 }
-
 
 /**
  * Add a new category
@@ -314,11 +333,13 @@ exports.categoriesGET = function() {
  **/
 exports.categoriesPOST = function(body) {
   return new Promise(function(resolve, _) {
+    // Example data to simulate a database response
     var examples = {};
     examples['application/json'] = {
-  "name" : "name",
-  "id" : 0
-};
+      "name" : "name",
+      "id" : 0
+    };
+    // Resolve with example data if available
     if (Object.keys(examples).length > 0) {
       resolve(examples[Object.keys(examples)[0]]);
     } else {
@@ -326,4 +347,3 @@ exports.categoriesPOST = function(body) {
     }
   });
 }
-
