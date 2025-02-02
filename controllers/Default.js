@@ -110,7 +110,7 @@ module.exports.booksBookIdPUT = function booksBookIdPUT (__, res, _, body, bookI
 };
 
 // Handler for GET request to retrieve all books
-module.exports.booksGET = function booksGET (req, res, _) {
+module.exports.booksGET = function booksGET (__, res, _) {
   Default.booksGET()
     .then(function (response) {
       // Respond with the list of books
@@ -123,7 +123,7 @@ module.exports.booksGET = function booksGET (req, res, _) {
 };
 
 // Handler for POST request to create a new book
-module.exports.booksPOST = function booksPOST (req, res, _, body) {
+module.exports.booksPOST = function booksPOST (__, res, _, body) {
   Default.booksPOST(body)
     .then(function (response) {
       // Respond with the result of the create operation
