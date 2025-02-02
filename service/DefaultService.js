@@ -6,7 +6,7 @@
  * authorId Long 
  * no response value expected for this operation
  **/
-exports.authorsAuthorIdDELETE = function(authorId) {
+exports.authorsAuthorIdDELETE = function(_) {
   return new Promise(function(resolve, _) {
     // Simulate deletion operation
     resolve();
@@ -19,7 +19,7 @@ exports.authorsAuthorIdDELETE = function(authorId) {
  * authorId Long 
  * returns Author
  **/
-exports.authorsAuthorIdGET = function(authorId) {
+exports.authorsAuthorIdGET = function(_) {
   return new Promise(function(resolve, _) {
     // Example data to simulate a database response
     var examples = {};
@@ -43,7 +43,7 @@ exports.authorsAuthorIdGET = function(authorId) {
  * authorId Long 
  * returns Author
  **/
-exports.authorsAuthorIdPUT = function(body, authorId) {
+exports.authorsAuthorIdPUT = function(_, __) {
   return new Promise(function(resolve, _) {
     // Example data to simulate a database response
     var examples = {};
@@ -94,7 +94,7 @@ exports.authorsGET = function() {
  * body AuthorInput 
  * returns Author
  **/
-exports.authorsPOST = function(body) {
+exports.authorsPOST = function(_) {
   return new Promise(function(resolve, _) {
     // Example data to simulate a database response
     var examples = {};
@@ -117,7 +117,7 @@ exports.authorsPOST = function(body) {
  * bookId Long 
  * no response value expected for this operation
  **/
-exports.booksBookIdDELETE = function(bookId) {
+exports.booksBookIdDELETE = function(_) {
   return new Promise(function(resolve, _) {
     // Simulate deletion operation
     resolve();
@@ -130,7 +130,7 @@ exports.booksBookIdDELETE = function(bookId) {
  * bookId Long 
  * returns Book
  **/
-exports.booksBookIdGET = function(bookId) {
+exports.booksBookIdGET = function(_) {
   return new Promise(function(resolve, _) {
     // Example data to simulate a database response
     var examples = {};
@@ -157,7 +157,7 @@ exports.booksBookIdGET = function(bookId) {
  * bookId Long 
  * returns Book
  **/
-exports.booksBookIdPUT = function(body, bookId) {
+exports.booksBookIdPUT = function(_, __) {
   return new Promise(function(resolve, _) {
     // Example data to simulate a database response
     var examples = {};
@@ -217,7 +217,7 @@ exports.booksGET = function() {
  * body BookInput 
  * returns Book
  **/
-exports.booksPOST = function(body) {
+exports.booksPOST = function(_) {
   return new Promise(function(resolve, _) {
     // Example data to simulate a database response
     var examples = {};
@@ -243,7 +243,7 @@ exports.booksPOST = function(body) {
  * categoryId Long 
  * no response value expected for this operation
  **/
-exports.categoriesCategoryIdDELETE = function(categoryId) {
+exports.categoriesCategoryIdDELETE = function(_) {
   return new Promise(function(resolve, _) {
     // Simulate deletion operation
     resolve();
@@ -256,7 +256,7 @@ exports.categoriesCategoryIdDELETE = function(categoryId) {
  * categoryId Long 
  * returns Category
  **/
-exports.categoriesCategoryIdGET = function(categoryId) {
+exports.categoriesCategoryIdGET = function(_) {
   return new Promise(function(resolve, _) {
     // Example data to simulate a database response
     var examples = {};
@@ -280,7 +280,7 @@ exports.categoriesCategoryIdGET = function(categoryId) {
  * categoryId Long 
  * returns Category
  **/
-exports.categoriesCategoryIdPUT = function(body, categoryId) {
+exports.categoriesCategoryIdPUT = function(_, __) {
   return new Promise(function(resolve, _) {
     // Example data to simulate a database response
     var examples = {};
@@ -331,7 +331,7 @@ exports.categoriesGET = function() {
  * body CategoryInput 
  * returns Category
  **/
-exports.categoriesPOST = function(body) {
+exports.categoriesPOST = function(_) {
   return new Promise(function(resolve, _) {
     // Example data to simulate a database response
     var examples = {};

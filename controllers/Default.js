@@ -6,7 +6,7 @@ var utils = require('../utils/writer.js');
 var Default = require('../service/DefaultService');
 
 // Handler for DELETE request to delete an author by ID
-module.exports.authorsAuthorIdDELETE = function authorsAuthorIdDELETE (req, res, _, authorId) {
+module.exports.authorsAuthorIdDELETE = function authorsAuthorIdDELETE (__, res, _, authorId) {
   Default.authorsAuthorIdDELETE(authorId)
     .then(function (response) {
       // Respond with the result of the delete operation
@@ -19,7 +19,7 @@ module.exports.authorsAuthorIdDELETE = function authorsAuthorIdDELETE (req, res,
 };
 
 // Handler for GET request to retrieve an author by ID
-module.exports.authorsAuthorIdGET = function authorsAuthorIdGET (req, res, _, authorId) {
+module.exports.authorsAuthorIdGET = function authorsAuthorIdGET (__, res, _, authorId) {
   Default.authorsAuthorIdGET(authorId)
     .then(function (response) {
       // Respond with the retrieved author data
@@ -32,7 +32,7 @@ module.exports.authorsAuthorIdGET = function authorsAuthorIdGET (req, res, _, au
 };
 
 // Handler for PUT request to update an author by ID
-module.exports.authorsAuthorIdPUT = function authorsAuthorIdPUT (req, res, _, body, authorId) {
+module.exports.authorsAuthorIdPUT = function authorsAuthorIdPUT (__, res, _, body, authorId) {
   Default.authorsAuthorIdPUT(body, authorId)
     .then(function (response) {
       // Respond with the result of the update operation
@@ -45,7 +45,7 @@ module.exports.authorsAuthorIdPUT = function authorsAuthorIdPUT (req, res, _, bo
 };
 
 // Handler for GET request to retrieve all authors
-module.exports.authorsGET = function authorsGET (req, res, _) {
+module.exports.authorsGET = function authorsGET (__, res, _) {
   Default.authorsGET()
     .then(function (response) {
       // Respond with the list of authors
@@ -58,7 +58,7 @@ module.exports.authorsGET = function authorsGET (req, res, _) {
 };
 
 // Handler for POST request to create a new author
-module.exports.authorsPOST = function authorsPOST (req, res, _, body) {
+module.exports.authorsPOST = function authorsPOST (__, res, _, body) {
   Default.authorsPOST(body)
     .then(function (response) {
       // Respond with the result of the create operation
@@ -71,7 +71,7 @@ module.exports.authorsPOST = function authorsPOST (req, res, _, body) {
 };
 
 // Handler for DELETE request to delete a book by ID
-module.exports.booksBookIdDELETE = function booksBookIdDELETE (req, res, _, bookId) {
+module.exports.booksBookIdDELETE = function booksBookIdDELETE (__, res, _, bookId) {
   Default.booksBookIdDELETE(bookId)
     .then(function (response) {
       // Respond with the result of the delete operation
@@ -84,7 +84,7 @@ module.exports.booksBookIdDELETE = function booksBookIdDELETE (req, res, _, book
 };
 
 // Handler for GET request to retrieve a book by ID
-module.exports.booksBookIdGET = function booksBookIdGET (req, res, _, bookId) {
+module.exports.booksBookIdGET = function booksBookIdGET (__, res, _, bookId) {
   Default.booksBookIdGET(bookId)
     .then(function (response) {
       // Respond with the retrieved book data
@@ -97,7 +97,7 @@ module.exports.booksBookIdGET = function booksBookIdGET (req, res, _, bookId) {
 };
 
 // Handler for PUT request to update a book by ID
-module.exports.booksBookIdPUT = function booksBookIdPUT (req, res, _, body, bookId) {
+module.exports.booksBookIdPUT = function booksBookIdPUT (__, res, _, body, bookId) {
   Default.booksBookIdPUT(body, bookId)
     .then(function (response) {
       // Respond with the result of the update operation
@@ -136,7 +136,7 @@ module.exports.booksPOST = function booksPOST (req, res, _, body) {
 };
 
 // Handler for DELETE request to delete a category by ID
-module.exports.categoriesCategoryIdDELETE = function categoriesCategoryIdDELETE (req, res, _, categoryId) {
+module.exports.categoriesCategoryIdDELETE = function categoriesCategoryIdDELETE (__, res, _, categoryId) {
   Default.categoriesCategoryIdDELETE(categoryId)
     .then(function (response) {
       // Respond with the result of the delete operation
@@ -149,7 +149,7 @@ module.exports.categoriesCategoryIdDELETE = function categoriesCategoryIdDELETE 
 };
 
 // Handler for GET request to retrieve a category by ID
-module.exports.categoriesCategoryIdGET = function categoriesCategoryIdGET (req, res, _, categoryId) {
+module.exports.categoriesCategoryIdGET = function categoriesCategoryIdGET (__, res, _, categoryId) {
   Default.categoriesCategoryIdGET(categoryId)
     .then(function (response) {
       // Respond with the retrieved category data
@@ -162,7 +162,7 @@ module.exports.categoriesCategoryIdGET = function categoriesCategoryIdGET (req, 
 };
 
 // Handler for PUT request to update a category by ID
-module.exports.categoriesCategoryIdPUT = function categoriesCategoryIdPUT (req, res, _, body, categoryId) {
+module.exports.categoriesCategoryIdPUT = function categoriesCategoryIdPUT (__, res, _, body, categoryId) {
   Default.categoriesCategoryIdPUT(body, categoryId)
     .then(function (response) {
       // Respond with the result of the update operation
@@ -175,7 +175,7 @@ module.exports.categoriesCategoryIdPUT = function categoriesCategoryIdPUT (req, 
 };
 
 // Handler for GET request to retrieve all categories
-module.exports.categoriesGET = function categoriesGET (req, res, _) {
+module.exports.categoriesGET = function categoriesGET (__, res, _) {
   Default.categoriesGET()
     .then(function (response) {
       // Respond with the list of categories
@@ -188,7 +188,7 @@ module.exports.categoriesGET = function categoriesGET (req, res, _) {
 };
 
 // Handler for POST request to create a new category
-module.exports.categoriesPOST = function categoriesPOST (req, res, _, body) {
+module.exports.categoriesPOST = function categoriesPOST (__, res, _, body) {
   Default.categoriesPOST(body)
     .then(function (response) {
       // Respond with the result of the create operation
